@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import CalendarTemplate from '../../components/CalendarTemplate';
-import DarkModeToggle from '../../components/DarkModeToggle';
 import Layout from '../../components/Layout';
 import LeftLayout from '../../components/LeftLayout';
 import Page from '../../components/Page';

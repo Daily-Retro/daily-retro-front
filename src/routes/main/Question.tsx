@@ -80,7 +80,3 @@ const QuestionArea = styled.div`
     //     border-radius: 10px;    
     // }
 `
-
-const InputCustom = styled.input`
-
-`
