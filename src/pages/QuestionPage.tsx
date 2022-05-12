@@ -16,8 +16,18 @@ function QuestionPage() {
 
   return (
     <CenterTemplate>
-      <div>
-        <Avatar />
+      <Question>
+        {/* <Avatar /> */}
+        <PlusMinusArea>
+          <BsBookmarkPlusFill onClick={() => setQuestion(question + 1)} />
+          <BsBookmarkXFill
+            onClick={() => {
+              if (question > 3) {
+                setQuestion(question - 1);
+              }
+            }}
+          />
+        </PlusMinusArea>
         <TitleArea>
           <p>질문 리스트</p>
           <InfoIcon onClick={() => setIsModalVisible(true)} />
@@ -35,16 +45,6 @@ function QuestionPage() {
           </Description>
         </Modal>
         <QuestionArea>
-          <PlusMinusArea>
-            <BsBookmarkPlusFill onClick={() => setQuestion(question + 1)} />
-            <BsBookmarkXFill
-              onClick={() => {
-                if (question > 3) {
-                  setQuestion(question - 1);
-                }
-              }}
-            />
-          </PlusMinusArea>
           <ListArea>
             {Array.from({ length: question }).map((_, index) => (
               <List key={index}>
@@ -57,20 +57,26 @@ function QuestionPage() {
             <Button>취소</Button>
           </ButtonArea>
         </QuestionArea>
-      </div>
+      </Question>
     </CenterTemplate>
   );
 }
 
 export default QuestionPage;
 
+const Question = styled.div`
+  box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 0 50px 50px;
+  border-radius: 20px;
+  position: relative;
+`;
+
 const Avatar = styled.div`
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-image: url(${avatar});
-  background-size: cover;
   margin: 0 auto;
+  /* background: #216e39; */
 `;
 
 const TitleArea = styled.div`
@@ -103,7 +109,8 @@ const QuestionArea = styled.div`
 const PlusMinusArea = styled.div`
   display: flex;
   color: #216e39;
-  font-size: 35px;
+  font-size: 45px;
+  margin-bottom: 30px;
   svg {
     &:hover {
       color: #309952;
