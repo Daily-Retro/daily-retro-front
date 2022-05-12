@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { commonType } from '../interfaces/reactType';
-import { ThemeContext } from '../App';
+import { commonType } from '../../interfaces/reactType';
+import { ThemeContext } from '../../App';
 
 function Modal({ visible, onCancel, children }: commonType) {
   const { theme } = useContext(ThemeContext);

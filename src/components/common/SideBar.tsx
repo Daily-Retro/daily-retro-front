@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import Nav from './Nav';
+import CalendarTemplate from '../CalendarTemplate';
 
 function SideBar() {
   const [click, setClick] = useState(false);
   return (
     <Wrapper size={String(click)}>
+      {click && <CalendarTemplate />}
       <Nav click={click} setClick={setClick} />
     </Wrapper>
   );

@@ -5,6 +5,7 @@ import {
   BsHouseDoorFill,
   BsFillPersonFill,
   BsSunFill,
+  BsPencilFill,
 } from 'react-icons/bs';
 import { clickType } from '../../interfaces/NavType';
 import { useNavigate } from 'react-router-dom';
@@ -21,6 +22,9 @@ function Nav({ click, setClick }: clickType) {
       </MenuIcon>
       <MenuIcon onClick={() => navigation('/profile')}>
         <BsFillPersonFill />
+      </MenuIcon>
+      <MenuIcon onClick={() => navigation('/diary')}>
+        <BsPencilFill />
       </MenuIcon>
       <MenuIcon>
         <BsSunFill />

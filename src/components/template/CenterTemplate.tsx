@@ -7,7 +7,7 @@ function CenterTemplate({ children }: multipleChildType) {
 
 export default CenterTemplate;
 
-const Center = styled.div`
+const Center = styled.main`
   font-size: 20px;
   font-weight: bold;
   display: grid;
