@@ -1,19 +1,18 @@
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './routes/home/Home';
-import Question from './routes/main/Question';
-import NotFound from './routes/NotFound';
-
+import { Route, Routes } from 'react-router-dom';
+import DiaryPage from './pages/DiaryPage';
+import HomePage from './pages/HomePage';
+import NotFound from './pages/NotFoundPage';
+import ProfilePage from './pages/ProfilePage';
+import QuestionPage from './pages/QuestionPage';
 
 export default function Router() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/question' element={<Question/>}/>
-        <Route path='/diary' element={<Question/>}/>
-        <Route path='*' element={<NotFound/>}/>
-      </Routes>
-    </BrowserRouter>
-  )
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/question" element={<QuestionPage />} />
+      <Route path="/diary" element={<DiaryPage />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
 }

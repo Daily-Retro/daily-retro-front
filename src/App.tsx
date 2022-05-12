@@ -1,32 +1,28 @@
-import React, { createContext } from 'react';
-// import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme, Theme } from './styles/theme';
-import { GlobalStyle } from './styles/global-style';
+import { createContext } from 'react';
+import { lightTheme, darkTheme } from './styles/theme';
+import { GlobalStyle } from './styles/global';
 import Router from './Router';
 import { useDarkMode } from './hooks/useDarkMode';
-
-interface ContextProps {
-  theme: Theme;
-  toggleTheme: () => void;
-}
-
-// ThemeContext 객체 생성
-export const ThemeContext = createContext<ContextProps>({
-  theme: lightTheme,		// 테마(라이트, 다크)
-  toggleTheme: () => {		// 테마 변경하는 함수
-    return null;
-  },
-});
+import { themeFunType } from './interfaces/themeType';
+import SideBar from './components/common/SideBar';
 
 function App() {
   const { theme, toggleTheme } = useDarkMode();
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-    <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
-    <Router/>
+      <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+      <SideBar />
+      <Router />
     </ThemeContext.Provider>
   );
 }
 
 export default App;
+
+export const ThemeContext = createContext<themeFunType>({
+  theme: lightTheme,
+  toggleTheme: () => {
+    return null;
+  },
+});

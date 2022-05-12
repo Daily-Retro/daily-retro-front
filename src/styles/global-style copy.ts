@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import { ThemeInterface } from './index.types';
+import { themeInterface } from '../interfaces/themeType';
 
-export const GlobalStyle = createGlobalStyle<ThemeInterface>`
+export const GlobalStyle = createGlobalStyle<themeInterface>`
     @font-face {
         font-family: 'TmoneyRoundWindRegular';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
@@ -32,7 +32,8 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
             color: #000;
         }
         .Calendar__monthArrow{
-            filter: opacity(0.5) drop-shadow(0 0 0 ${({ theme }) => theme.primary});
+            filter: opacity(0.5) drop-shadow(0 0 0 ${({ theme }) =>
+              theme.primary});
         }
         .Calendar__day{
             color: ${({ theme }) => theme.text2};
@@ -76,4 +77,4 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
     .navyBlueDay:not(.-selectedStart):not(.-selectedBetween):not(.-selectedEnd):not(.-selected) {
         border: 2px solid rgba(52, 73, 94, 0.7) !important;
     }
-`
+`;
