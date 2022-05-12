@@ -1,16 +1,16 @@
 export const lightTheme = {
-    body: '#FFFFFF',
-    page: '#F1F3F5',
-    opacity: 'rgb(255 255 255 / 60%)',
-    primary: '#4E6982',
-    text1: '#212529',
-    text2: '#495057',
-    text3: '#868E96',
-    text4: '#CED4DA',
-    border1: '#343A40',
-    border2: '#ADB5BD',
-    border3: '#DEE2E6',
-    border4: '#F1F3F5',
+  body: '#FFFFFF',
+  page: '#F1F3F5',
+  opacity: 'rgb(255 255 255 / 60%)',
+  primary: '#4E6982',
+  text1: '#212529',
+  text2: '#495057',
+  text3: '#868E96',
+  text4: '#CED4DA',
+  border1: '#343A40',
+  border2: '#ADB5BD',
+  border3: '#DEE2E6',
+  border4: '#F1F3F5',
 };
 
 export const darkTheme = {

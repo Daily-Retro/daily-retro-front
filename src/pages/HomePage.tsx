@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import PencilAnimation from '../components/home/PencilAnimation';
 import CenterTemplate from '../components/template/CenterTemplate';
 
 function HomePage() {
@@ -12,6 +13,7 @@ function HomePage() {
           내가 정해놓은 질문에 맞춰 <br />
           회고하는 나의 회고장
         </Text>
+        <PencilAnimation />
         <Button onClick={() => navigation('/question')}>시작하기</Button>
       </div>
     </CenterTemplate>

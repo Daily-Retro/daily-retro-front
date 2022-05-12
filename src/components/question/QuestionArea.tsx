@@ -3,7 +3,7 @@ import SaveCancel from './SaveCancel';
 
 function QuestionArea({ que }: { que: number }) {
   return (
-    <Wrapper>
+    <>
       <ListArea>
         {Array.from({ length: que }).map((_, index) => (
           <List key={index}>
@@ -12,13 +12,11 @@ function QuestionArea({ que }: { que: number }) {
         ))}
       </ListArea>
       <SaveCancel />
-    </Wrapper>
+    </>
   );
 }
 
 export default QuestionArea;
-
-const Wrapper = styled.div``;
 
 const ListArea = styled.ol`
   width: 200px;
